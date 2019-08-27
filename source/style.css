@@ -1,0 +1,44 @@
+* {
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    -webkit-text-stroke: .5px black;
+    color: rgb(118, 230, 70);
+    background-color: rgb(43, 43, 43); 
+    font-size: 36px;
+    margin: 50px auto;
+    margin-top: 15%;
+    text-align: center;
+}
+
+main {
+    font-size: 12px;
+    margin:50px;
+}
+
+button {
+    text-align: center;
+    margin-top: 60px;
+}
+
+button:focus {
+    background-color: rgb(118, 230, 70) auto 5px; 
+}
+
+.answers-list {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 160px 160px;
+    grid-template-rows: 40px 40px;
+    height: 20px;
+    width: 40px;
+    list-style: none;
+    padding: 10px;
+}
+
+.answers {
+    margin: 5px;
+    padding: 0px;
+    align-items: center;
+}
