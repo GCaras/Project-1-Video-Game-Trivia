@@ -25,7 +25,7 @@ const questions =[
         "Super Mario"
       ],
       "tidbit": "Things and stuff",
-      "image": "./images/zelda-rupee.png"
+      "image": "./images/video-game-arcade-svgrepo-com.svg"
     },
     {
       "question": "What is the name of the main protagonist in the Legend of Zelda franchise?",
@@ -47,7 +47,7 @@ const questions =[
       "Cardboard cut-out"
     ],
     "tidbit": "words",
-    "image": ""
+    "image": "./images/game-console-joystick-svgrepo-com.svg"
     },
     {
       "question": "In what year was the original Sonic the Hedgehog game released?",
@@ -58,7 +58,7 @@ const questions =[
         "1995"
       ],
       "tidbit": "words",
-      "image": ""
+      "image": "./images/game-console-joystick-svgrepo-com.svg"
     },
     {
       "question": "In the Halo series, which era of SPARTAN is Master Chief? ",
@@ -69,7 +69,7 @@ const questions =[
         "SPARTAN-IV"
       ],
       "tidbit": "words",
-      "image": ""
+      "image": "./images/game-console-joystick-svgrepo-com.svg"
     },
     {
       "question": "Which game featured the very first easter egg ever?",
@@ -80,7 +80,7 @@ const questions =[
         "Joust"
       ],
       "tidbit": "words",
-      "image": ""
+      "image": "./images/game-console-joystick-svgrepo-com.svg"
     },
     {
       "question": "When was Steam first released?",
@@ -91,7 +91,7 @@ const questions =[
         "2007"
       ],
       "tidbit": "words",
-      "image": ""
+      "image": "./images/game-console-joystick-svgrepo-com.svg"
     },    
     {
       "question": "In the National Pokedex what number is Pikachu",
@@ -102,7 +102,7 @@ const questions =[
         "56"
       ],
       "tidbit": "words",
-      "image": ""
+      "image": "./images/game-console-joystick-svgrepo-com.svg"
     },
     {
       "question": "What programming language was used to create the game &quot;Minecraft&quot;?",
@@ -113,7 +113,7 @@ const questions =[
         "Python"
       ],
       "tidbit": "words",
-      "image": ""
+      "image": "./images/game-console-joystick-svgrepo-com.svg"
     },
     {
       "question": "Which game has been credited with inventing the first-person shooter genre?",
@@ -124,7 +124,7 @@ const questions =[
         "Counter-Strike"
       ],
       "tidbit": "words",
-      "image": ""
+      "image": "./images/game-console-joystick-svgrepo-com.svg"
     }];
 
 var question = document.querySelector(".question-hint-comment");
@@ -157,7 +157,7 @@ submitButton.addEventListener("click", function(evt) {
 
 answer1.addEventListener("click", function(evt) {
   evt.preventDefault();  
-  if (questionNumber === 9) {
+  if (questionNumber === 10) {
     question.innerHTML = `Congrats! You got ${correctAnswers} questions correct!`
     answer1.innerHTML = ""
     answer2.innerHTML = ""
@@ -178,8 +178,8 @@ answer1.addEventListener("click", function(evt) {
   question.innerHTML = questions[q].question;
   answer1.innerHTML = questions[q].incorrect_answers[1];
   answer2.innerHTML = questions[q].incorrect_answers[0];
-  answer3.innerHTML = questions[q].incorrect_answers[2];
-  answer4.innerHTML = questions[q].correct_answer;
+  answer3.innerHTML = questions[q].correct_answer;
+  answer4.innerHTML = questions[q].incorrect_answers[2];
   document.querySelector(".image").src = questions[q].image;
     }
 })
@@ -244,7 +244,7 @@ answer3.addEventListener("click", function(evt) {
 
 answer4.addEventListener("click", function(evt) {
   evt.preventDefault();    
-  if (questionNumber === 9) {
+  if (questionNumber === 10) {
     question.innerHTML = `Congrats! You got ${correctAnswers} questions correct!`
     answer1.innerHTML = ""
     answer2.innerHTML = ""
