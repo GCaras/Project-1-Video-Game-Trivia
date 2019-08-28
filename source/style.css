@@ -13,28 +13,21 @@ body {
     color: rgb(118, 230, 70);
     background-color: rgb(43, 43, 43); 
     font-size: 36px;
-    margin: 20px auto;
     text-align: center;
 }
 
 .greeting {
-    color: rgb(118, 230, 70);
-    background-color: rgb(43, 43, 43); 
+    color: white;
     font-size: 45px;
     margin: 0px auto;
-    margin: 40px 0;
+    margin: 20px 0;
     margin-top: 15%;
     text-align: center;
 }
 
-.old-man-image{
-    padding: 30px;
-    height: 200px;
-    width: 200px;
-}
-
-.question-hint-comment {
-    padding-top: 20px;
+.image {
+    max-width: 200px;
+    margin: 20px 0;
 }
 
 main {
@@ -46,7 +39,7 @@ main {
 button {
     background-color: black;
     border: solid 2px white;
-    color: rgb(118, 230, 70);
+    color: white;
     -webkit-text-stroke: .25px black;
     text-align: center;
     height: 35px;
@@ -56,22 +49,29 @@ button {
 .answers-list {
     margin: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    height: 50px;
     justify-items: center;
-    height: 20px;
-    width: 40px;
-    list-style: none;
-    padding: 10px;
+    width: 400px;
 }
 
 .answers {
-    display: flex;
-    justify-content: center;
-    color: white;
-    margin-top: 10px;
-    margin: 5px;
-    padding: 0px;
-    text-align: center;
-    width: 200px;
     align-items: center;
+    color: rgb(50, 255, 47);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px 0;
+    min-width: 200px;
+}
+
+button {
+    background-color: black;
+    border: solid 2px white;
+    color: white;
+    -webkit-text-stroke: .25px black;
+    text-align: center;
+    height: 35px;
+    width: 120px;
 }

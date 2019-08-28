@@ -17,31 +17,37 @@
 
 const questions =[
     {
+      "question": "What is the highest selling videogame of all-time?",
+      "correct_answer": "Minecraft",
+      "incorrect_answers": [
+        "Tetris",
+        "GTA V",
+        "Super Mario"
+      ],
+      "tidbit": "Things and stuff",
+      "image": "./images/zelda-rupee.png"
+    },
+    {
       "question": "What is the name of the main protagonist in the Legend of Zelda franchise?",
       "correct_answer": "Link",
       "incorrect_answers": [
         "Mario",
         "Zelda",
         "Pit"
-      ]
+      ],
+      "tidbit": "The first Zelda game is one of the last, chronologically speaking. The first two games take place in an alternate universe where Link failed to defeat Ganon in The Ocarina of Time, which was released later. Skyward Sword, meanwhile, is the first Zelda game, chronologically.",
+      "image": "./images/legend-of-zelda-link-sword.png"
     },
     {
-      "question": "What year was the game Team Fortress 2 released?",
-      "correct_answer": "2007",
-      "incorrect_answers": [
-        "2009",
-        "2005",
-        "2010"
-      ]
-    },
-    {
-      "question": "Which popular First Person Shooter (FPS) franchise, got a Real Time Strategy (RTS) game developed based on its universe?",
-      "correct_answer": "Halo",
-      "incorrect_answers": [
-        "Battlefield",
-        "Call of Duty",
-        "Borderlands"
-      ]
+    "question": "What does Solid Snake use to hide himself with?",
+    "correct_answer": "Cardboard Box",
+    "incorrect_answers": [
+      "Cloaking Device",
+      "Metal Crate",
+      "Cardboard cut-out"
+    ],
+    "tidbit": "words",
+    "image": ""
     },
     {
       "question": "Which Greek letter represents the Half-Life logo?",
@@ -62,17 +68,41 @@ var answer4 = document.querySelector("#a4");
 
 var questionNumber = 0;
 
+var correctAnswers = 0;
+
 var submitButton = document.querySelector(".start-submit-button");
 
-submitButton.addEventListener("click", function(i) {
-    i = questionNumber;
-    question.innerHTML = questions[i].question;
-    answer1.innerHTML = questions[i].correct_answer;
-    answer2.innerHTML = questions[i].incorrect_answers[0];
-    answer3.innerHTML = questions[i].incorrect_answers[1];
-    answer4.innerHTML = questions[i].incorrect_answers[2];
-    questionNumber = questionNumber + 1;
-    
+var image = document.querySelector(".image");
+
+submitButton.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  let i = questionNumber;
+  question.innerHTML = questions[i].question;
+  answer1.innerHTML = questions[i].correct_answer;
+  answer2.innerHTML = questions[i].incorrect_answers[0];
+  answer3.innerHTML = questions[i].incorrect_answers[1];
+  answer4.innerHTML = questions[i].incorrect_answers[2];
+  document.querySelector(".image").src = questions[i].image;
+  document.querySelector(".start-submit-button").style.display = "none";
+  
+})
+
+answer1.addEventListener("click", function(evt) {
+  evt.preventDefault();    
+  // if (answer1.innerHTML === questions[i].correct_answer) {
+  let i = questionNumber;
+  alert(`Correct! ${questions[i].tidbit}`);
+  questionNumber = questionNumber + 1;
+  correctAnswers = correctAnswers +1;
+  console.log(correctAnswers);
+  let q = questionNumber;
+  question.innerHTML = questions[q].question;
+  answer1.innerHTML = questions[q].correct_answer;
+  answer2.innerHTML = questions[q].incorrect_answers[0];
+  answer3.innerHTML = questions[q].incorrect_answers[1];
+  answer4.innerHTML = questions[q].incorrect_answers[2];
+  document.querySelector(".image").src = questions[q].image;
+  // }
 })
 
 
