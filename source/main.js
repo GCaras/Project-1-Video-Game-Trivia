@@ -50,13 +50,81 @@ const questions =[
     "image": ""
     },
     {
-      "question": "Which Greek letter represents the Half-Life logo?",
-      "correct_answer": "Lambda",
+      "question": "In what year was the original Sonic the Hedgehog game released?",
+      "correct_answer": "1991",
       "incorrect_answers": [
-        "Omega",
-        "Alpha",
-        "Sigma"
-      ]
+        "1989",
+        "1993",
+        "1995"
+      ],
+      "tidbit": "words",
+      "image": ""
+    },
+    {
+      "question": "In the Halo series, which era of SPARTAN is Master Chief? ",
+      "correct_answer": "SPARTAN-II",
+      "incorrect_answers": [
+        "SPARTAN-I",
+        "SPARTAN-III",
+        "SPARTAN-IV"
+      ],
+      "tidbit": "words",
+      "image": ""
+    },
+    {
+      "question": "Which game featured the very first easter egg ever?",
+      "correct_answer": "Adventure",
+      "incorrect_answers": [
+        "Super Mario Bros.",
+        "Aladdin",
+        "Joust"
+      ],
+      "tidbit": "words",
+      "image": ""
+    },
+    {
+      "question": "When was Steam first released?",
+      "correct_answer": "2003",
+      "incorrect_answers": [
+        "2004",
+        "2011",
+        "2007"
+      ],
+      "tidbit": "words",
+      "image": ""
+    },    
+    {
+      "question": "In the National Pokedex what number is Pikachu",
+      "correct_answer": "25",
+      "incorrect_answers": [
+        "1",
+        "151",
+        "56"
+      ],
+      "tidbit": "words",
+      "image": ""
+    },
+    {
+      "question": "What programming language was used to create the game &quot;Minecraft&quot;?",
+      "correct_answer": "Java",
+      "incorrect_answers": [
+        "HTML 5",
+        "C++",
+        "Python"
+      ],
+      "tidbit": "words",
+      "image": ""
+    },
+    {
+      "question": "Which game has been credited with inventing the first-person shooter genre?",
+      "correct_answer": "Wolfenstein 3D",
+      "incorrect_answers": [
+        "Doom",
+        "Duke Nukem",
+        "Counter-Strike"
+      ],
+      "tidbit": "words",
+      "image": ""
     }];
 
 var question = document.querySelector(".question-hint-comment");
@@ -78,9 +146,9 @@ submitButton.addEventListener("click", function(evt) {
   evt.preventDefault();
   let i = questionNumber;
   question.innerHTML = questions[i].question;
-  answer1.innerHTML = questions[i].correct_answer;
-  answer2.innerHTML = questions[i].incorrect_answers[0];
-  answer3.innerHTML = questions[i].incorrect_answers[1];
+  answer1.innerHTML = questions[i].incorrect_answers[0];
+  answer2.innerHTML = questions[i].incorrect_answers[1]; 
+  answer3.innerHTML = questions[i].correct_answer;
   answer4.innerHTML = questions[i].incorrect_answers[2];
   document.querySelector(".image").src = questions[i].image;
   document.querySelector(".start-submit-button").style.display = "none";
@@ -88,6 +156,60 @@ submitButton.addEventListener("click", function(evt) {
 })
 
 answer1.addEventListener("click", function(evt) {
+  evt.preventDefault();    
+  // if (answer1.innerHTML === questions[i].correct_answer) {
+  let i = questionNumber;
+  alert(`Correct! ${questions[i].tidbit}`);
+  questionNumber = questionNumber + 1;
+  correctAnswers = correctAnswers +1;
+  console.log(correctAnswers);
+  let q = questionNumber;
+  question.innerHTML = questions[q].question;
+  answer1.innerHTML = questions[q].incorrect_answers[1];
+  answer2.innerHTML = questions[q].incorrect_answers[0];
+  answer3.innerHTML = questions[q].correct_answer;
+  answer4.innerHTML = questions[q].incorrect_answers[2];
+  document.querySelector(".image").src = questions[q].image;
+  // }
+})
+
+answer2.addEventListener("click", function(evt) {
+  evt.preventDefault();    
+  // if (answer1.innerHTML === questions[i].correct_answer) {
+  let i = questionNumber;
+  alert(`Correct! ${questions[i].tidbit}`);
+  questionNumber = questionNumber + 1;
+  correctAnswers = correctAnswers + 1;
+  console.log(correctAnswers);
+  let q = questionNumber;
+  question.innerHTML = questions[q].question;
+  answer1.innerHTML = questions[q].incorrect_answers[0];
+  answer2.innerHTML = questions[q].incorrect_answers[1];
+  answer3.innerHTML = questions[q].incorrect_answers[2];
+  answer4.innerHTML = questions[q].correct_answer;
+  document.querySelector(".image").src = questions[q].image;
+  // }
+})
+
+answer3.addEventListener("click", function(evt) {
+  evt.preventDefault();    
+  // if (answer1.innerHTML === questions[i].correct_answer) {
+  let i = questionNumber;
+  alert(`Correct! ${questions[i].tidbit}`);
+  questionNumber = questionNumber + 1;
+  correctAnswers = correctAnswers +1;
+  console.log(correctAnswers);
+  let q = questionNumber;
+  question.innerHTML = questions[q].question;
+  document.querySelector(".image").src = questions[q].image;
+  answer1.innerHTML = questions[q].incorrect_answers[0];
+  answer2.innerHTML = questions[q].correct_answer;
+  answer3.innerHTML = questions[q].incorrect_answers[1];
+  answer4.innerHTML = questions[q].incorrect_answers[2];
+  // }
+})
+
+answer4.addEventListener("click", function(evt) {
   evt.preventDefault();    
   // if (answer1.innerHTML === questions[i].correct_answer) {
   let i = questionNumber;

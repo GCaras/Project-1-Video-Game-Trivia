@@ -11,7 +11,7 @@ body {
     -1px 1px 0 #000,
     1px 1px 0 #000;
     color: rgb(118, 230, 70);
-    background-color: rgb(43, 43, 43); 
+    background-color: rgb(43, 43, 43);
     font-size: 36px;
     text-align: center;
 }
@@ -64,6 +64,7 @@ button {
     justify-content: center;
     margin: 20px 0;
     min-width: 200px;
+    height: 40px;
 }
 
 button {
