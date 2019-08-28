@@ -53,8 +53,6 @@ const questions =[
       ]
     }];
 
-console.log(questions[0]);
-
 var question = document.querySelector(".question-hint-comment");
 
 var answer1 = document.querySelector("#a1");
@@ -64,7 +62,7 @@ var answer4 = document.querySelector("#a4");
 
 var questionNumber = 0;
 
-const submitButton = document.querySelector(".start-submit-button");
+var submitButton = document.querySelector(".start-submit-button");
 
 submitButton.addEventListener("click", function(i) {
     i = questionNumber;
@@ -74,6 +72,7 @@ submitButton.addEventListener("click", function(i) {
     answer3.innerHTML = questions[i].incorrect_answers[1];
     answer4.innerHTML = questions[i].incorrect_answers[2];
     questionNumber = questionNumber + 1;
+    
 })
 
 
