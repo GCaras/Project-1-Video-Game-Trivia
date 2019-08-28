@@ -102,7 +102,7 @@ const questions =[
         "56"
       ],
       "tidbit": "words",
-      "image": "./images/game-console-joystick-svgrepo-com.svg"
+      "image": "./images/pikachu.png"
     },
     {
       "question": "What programming language was used to create the game &quot;Minecraft&quot;?",
@@ -183,8 +183,8 @@ answer1.addEventListener("click", function(evt) {
       } else {
         let q = questionNumber;
         question.innerHTML = questions[q].question;
-        answer1.innerHTML = questions[q].incorrect_answers[1];
-        answer2.innerHTML = questions[q].incorrect_answers[0];
+        answer1.innerHTML = questions[q].incorrect_answers[0];
+        answer2.innerHTML = questions[q].incorrect_answers[1];
         answer3.innerHTML = questions[q].correct_answer;
         answer4.innerHTML = questions[q].incorrect_answers[2];
         document.querySelector(".image").src = questions[q].image;
@@ -205,8 +205,8 @@ answer1.addEventListener("click", function(evt) {
       } else {
         let q = questionNumber;
         question.innerHTML = questions[q].question;
-        answer1.innerHTML = questions[q].incorrect_answers[1];
-        answer2.innerHTML = questions[q].incorrect_answers[0];
+        answer1.innerHTML = questions[q].incorrect_answers[0];
+        answer2.innerHTML = questions[q].incorrect_answers[1];
         answer3.innerHTML = questions[q].correct_answer;
         answer4.innerHTML = questions[q].incorrect_answers[2];
         document.querySelector(".image").src = questions[q].image;
@@ -234,10 +234,10 @@ answer2.addEventListener("click", function(evt) {
       } else {
         let q = questionNumber;
         question.innerHTML = questions[q].question;
-        answer1.innerHTML = questions[q].incorrect_answers[1];
-        answer2.innerHTML = questions[q].incorrect_answers[0];
-        answer3.innerHTML = questions[q].correct_answer;
-        answer4.innerHTML = questions[q].incorrect_answers[2];
+        answer1.innerHTML = questions[q].incorrect_answers[0];
+        answer2.innerHTML = questions[q].incorrect_answers[1];
+        answer3.innerHTML = questions[q].incorrect_answers[2];
+        answer4.innerHTML = questions[q].correct_answer;
         document.querySelector(".image").src = questions[q].image;
       }
     } else {
@@ -285,9 +285,9 @@ answer3.addEventListener("click", function(evt) {
       } else {
         let q = questionNumber;
         question.innerHTML = questions[q].question;
-        answer1.innerHTML = questions[q].incorrect_answers[1];
-        answer2.innerHTML = questions[q].incorrect_answers[0];
-        answer3.innerHTML = questions[q].correct_answer;
+        answer1.innerHTML = questions[q].incorrect_answers[0];
+        answer2.innerHTML = questions[q].correct_answer;
+        answer3.innerHTML = questions[q].incorrect_answers[1];
         answer4.innerHTML = questions[q].incorrect_answers[2];
         document.querySelector(".image").src = questions[q].image;
       }
@@ -307,9 +307,9 @@ answer3.addEventListener("click", function(evt) {
       } else {
         let q = questionNumber;
         question.innerHTML = questions[q].question;
-        answer1.innerHTML = questions[q].incorrect_answers[1];
-        answer2.innerHTML = questions[q].incorrect_answers[0];
-        answer3.innerHTML = questions[q].correct_answer;
+        answer1.innerHTML = questions[q].incorrect_answers[0];
+        answer2.innerHTML = questions[q].correct_answer;
+        answer3.innerHTML = questions[q].incorrect_answers[1];
         answer4.innerHTML = questions[q].incorrect_answers[2];
         document.querySelector(".image").src = questions[q].image;
         }
@@ -336,9 +336,9 @@ answer4.addEventListener("click", function(evt) {
       } else {
         let q = questionNumber;
         question.innerHTML = questions[q].question;
-        answer1.innerHTML = questions[q].incorrect_answers[1];
+        answer1.innerHTML = questions[q].correct_answer;
         answer2.innerHTML = questions[q].incorrect_answers[0];
-        answer3.innerHTML = questions[q].correct_answer;
+        answer3.innerHTML = questions[q].incorrect_answers[1];
         answer4.innerHTML = questions[q].incorrect_answers[2];
         document.querySelector(".image").src = questions[q].image;
       }
@@ -358,9 +358,9 @@ answer4.addEventListener("click", function(evt) {
       } else {
         let q = questionNumber;
         question.innerHTML = questions[q].question;
-        answer1.innerHTML = questions[q].incorrect_answers[1];
+        answer1.innerHTML = questions[q].correct_answer;
         answer2.innerHTML = questions[q].incorrect_answers[0];
-        answer3.innerHTML = questions[q].correct_answer;
+        answer3.innerHTML = questions[q].incorrect_answers[1];
         answer4.innerHTML = questions[q].incorrect_answers[2];
         document.querySelector(".image").src = questions[q].image;
         }
