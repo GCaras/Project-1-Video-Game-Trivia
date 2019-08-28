@@ -22,7 +22,7 @@ const questions =[
       "incorrect_answers": [
         "Tetris",
         "GTA V",
-        "Super Mario"
+        "Fortnite"
       ],
       "tidbit": "Things and stuff",
       "image": "./images/video-game-arcade-svgrepo-com.svg"
@@ -134,6 +134,11 @@ var answer2 = document.querySelector("#a2");
 var answer3 = document.querySelector("#a3");
 var answer4 = document.querySelector("#a4");
 
+answer1.style.display= "none";
+answer2.style.display= "none";
+answer3.style.display= "none";
+answer4.style.display= "none";
+
 var questionNumber = 0;
 
 var correctAnswers = 0;
@@ -152,123 +157,214 @@ submitButton.addEventListener("click", function(evt) {
   answer4.innerHTML = questions[i].incorrect_answers[2];
   document.querySelector(".image").src = questions[i].image;
   document.querySelector(".start-submit-button").style.display = "none";
-  
+  answer1.style.display= "";
+  answer2.style.display= "";
+  answer3.style.display= "";
+  answer4.style.display= "";
 })
 
 answer1.addEventListener("click", function(evt) {
   evt.preventDefault();  
-  if (questionNumber === 10) {
-    question.innerHTML = `Congrats! You got ${correctAnswers} questions correct!`
-    answer1.innerHTML = ""
-    answer2.innerHTML = ""
-    answer3.innerHTML = ""
-    answer4.innerHTML = ""
-} else {
   let i = questionNumber;  
   if (answer1.innerHTML === questions[i].correct_answer) {
-  alert(`Correct! ${questions[i].tidbit}`);
-  questionNumber = questionNumber + 1;
-  correctAnswers = correctAnswers +1;
-  console.log(correctAnswers);
-  } else{
-    alert(`Oof, I'm sorry but that's incorrect`);
+    alert(`Correct! ${questions[i].tidbit}`);
     questionNumber = questionNumber + 1;
-  }
-  let q = questionNumber;
-  question.innerHTML = questions[q].question;
-  answer1.innerHTML = questions[q].incorrect_answers[1];
-  answer2.innerHTML = questions[q].incorrect_answers[0];
-  answer3.innerHTML = questions[q].correct_answer;
-  answer4.innerHTML = questions[q].incorrect_answers[2];
-  document.querySelector(".image").src = questions[q].image;
-    }
+    correctAnswers = correctAnswers +1;
+    if (questionNumber === 10) {
+      question.innerHTML = `Congrats! You got ${correctAnswers} questions correct!`
+      answer1.innerHTML = "";
+      answer2.innerHTML = "";
+      answer3.innerHTML = "";
+      answer4.innerHTML = "";
+      answer1.style.display= "none";
+      answer2.style.display= "none";
+      answer3.style.display= "none";
+      answer4.style.display= "none";
+      } else {
+        let q = questionNumber;
+        question.innerHTML = questions[q].question;
+        answer1.innerHTML = questions[q].incorrect_answers[1];
+        answer2.innerHTML = questions[q].incorrect_answers[0];
+        answer3.innerHTML = questions[q].correct_answer;
+        answer4.innerHTML = questions[q].incorrect_answers[2];
+        document.querySelector(".image").src = questions[q].image;
+      }
+    } else if (answer1.innerHTML !== questions[i].correct_answer) {
+      alert(`Oof, I'm sorry but that's incorrect`);
+      questionNumber = questionNumber + 1;
+      if (questionNumber === 10) {
+        question.innerHTML = `Congrats! You got ${correctAnswers} questions correct!`
+        answer1.innerHTML = "";
+        answer2.innerHTML = "";
+        answer3.innerHTML = "";
+        answer4.innerHTML = "";
+        answer1.style.display= "none";
+        answer2.style.display= "none";
+        answer3.style.display= "none";
+        answer4.style.display= "none";
+      } else {
+        let q = questionNumber;
+        question.innerHTML = questions[q].question;
+        answer1.innerHTML = questions[q].incorrect_answers[1];
+        answer2.innerHTML = questions[q].incorrect_answers[0];
+        answer3.innerHTML = questions[q].correct_answer;
+        answer4.innerHTML = questions[q].incorrect_answers[2];
+        document.querySelector(".image").src = questions[q].image;
+        }
+      }
 })
 
 answer2.addEventListener("click", function(evt) {
-  evt.preventDefault();    
-  if (questionNumber === 9) {
-    question.innerHTML = `Congrats! You got ${correctAnswers} questions correct!`
-    answer1.innerHTML = ""
-    answer2.innerHTML = ""
-    answer3.innerHTML = ""
-    answer4.innerHTML = ""
-} else {
+  evt.preventDefault();  
   let i = questionNumber;  
   if (answer2.innerHTML === questions[i].correct_answer) {
-  alert(`Correct! ${questions[i].tidbit}`);
-  questionNumber = questionNumber + 1;
-  correctAnswers = correctAnswers +1;
-  console.log(correctAnswers);
-  } else{
-    alert(`Oof, I'm sorry but that's incorrect`);
+    alert(`Correct! ${questions[i].tidbit}`);
     questionNumber = questionNumber + 1;
-  }
-  let q = questionNumber;
-  question.innerHTML = questions[q].question;
-  answer1.innerHTML = questions[q].incorrect_answers[0];
-  answer2.innerHTML = questions[q].incorrect_answers[1];
-  answer3.innerHTML = questions[q].incorrect_answers[2];
-  answer4.innerHTML = questions[q].correct_answer;
-  document.querySelector(".image").src = questions[q].image;
-    }
+    correctAnswers = correctAnswers +1;
+    if (questionNumber === 10) {
+      question.innerHTML = `Congrats! You got ${correctAnswers} questions correct!`
+      answer1.innerHTML = "";
+      answer2.innerHTML = "";
+      answer3.innerHTML = "";
+      answer4.innerHTML = "";
+      answer1.style.display= "none";
+      answer2.style.display= "none";
+      answer3.style.display= "none";
+      answer4.style.display= "none";
+      } else {
+        let q = questionNumber;
+        question.innerHTML = questions[q].question;
+        answer1.innerHTML = questions[q].incorrect_answers[1];
+        answer2.innerHTML = questions[q].incorrect_answers[0];
+        answer3.innerHTML = questions[q].correct_answer;
+        answer4.innerHTML = questions[q].incorrect_answers[2];
+        document.querySelector(".image").src = questions[q].image;
+      }
+    } else {
+      alert(`Oof, I'm sorry but that's incorrect`);
+      questionNumber = questionNumber + 1;
+      if (questionNumber === 10) {
+        question.innerHTML = `Congrats! You got ${correctAnswers} questions correct!`
+        answer1.innerHTML = "";
+        answer2.innerHTML = "";
+        answer3.innerHTML = "";
+        answer4.innerHTML = "";
+        answer1.style.display= "none";
+        answer2.style.display= "none";
+        answer3.style.display= "none";
+        answer4.style.display= "none";
+      } else {
+        let q = questionNumber;
+        question.innerHTML = questions[q].question;
+        answer1.innerHTML = questions[q].incorrect_answers[1];
+        answer2.innerHTML = questions[q].incorrect_answers[0];
+        answer3.innerHTML = questions[q].correct_answer;
+        answer4.innerHTML = questions[q].incorrect_answers[2];
+        document.querySelector(".image").src = questions[q].image;
+        }
+      }
 })
 
 answer3.addEventListener("click", function(evt) {
-  evt.preventDefault();    
-  if (questionNumber === 9) {
-    question.innerHTML = `Congrats! You got ${correctAnswers} questions correct!`
-    answer1.innerHTML = ""
-    answer2.innerHTML = ""
-    answer3.innerHTML = ""
-    answer4.innerHTML = ""
-} else {
+  evt.preventDefault();  
   let i = questionNumber;  
   if (answer3.innerHTML === questions[i].correct_answer) {
-  alert(`Correct! ${questions[i].tidbit}`);
-  questionNumber = questionNumber + 1;
-  correctAnswers = correctAnswers +1;
-  console.log(correctAnswers);
-  } else{
-    alert(`Oof, I'm sorry but that's incorrect`);
+    alert(`Correct! ${questions[i].tidbit}`);
     questionNumber = questionNumber + 1;
-  }
-  let q = questionNumber;
-  question.innerHTML = questions[q].question;
-  answer1.innerHTML = questions[q].incorrect_answers[0]; 
-  answer2.innerHTML = questions[q].correct_answer;
-  answer3.innerHTML = questions[q].incorrect_answers[1];
-  answer4.innerHTML = questions[q].incorrect_answers[2];
-  document.querySelector(".image").src = questions[q].image;
-    }
+    correctAnswers = correctAnswers +1;
+    if (questionNumber === 10) {
+      question.innerHTML = `Congrats! You got ${correctAnswers} questions correct!`
+      answer1.innerHTML = "";
+      answer2.innerHTML = "";
+      answer3.innerHTML = "";
+      answer4.innerHTML = "";
+      answer1.style.display= "none";
+      answer2.style.display= "none";
+      answer3.style.display= "none";
+      answer4.style.display= "none";
+      } else {
+        let q = questionNumber;
+        question.innerHTML = questions[q].question;
+        answer1.innerHTML = questions[q].incorrect_answers[1];
+        answer2.innerHTML = questions[q].incorrect_answers[0];
+        answer3.innerHTML = questions[q].correct_answer;
+        answer4.innerHTML = questions[q].incorrect_answers[2];
+        document.querySelector(".image").src = questions[q].image;
+      }
+    } else {
+      alert(`Oof, I'm sorry but that's incorrect`);
+      questionNumber = questionNumber + 1;
+      if (questionNumber === 10) {
+        question.innerHTML = `Congrats! You got ${correctAnswers} questions correct!`
+        answer1.innerHTML = "";
+        answer2.innerHTML = "";
+        answer3.innerHTML = "";
+        answer4.innerHTML = "";
+        answer1.style.display= "none";
+        answer2.style.display= "none";
+        answer3.style.display= "none";
+        answer4.style.display= "none";
+      } else {
+        let q = questionNumber;
+        question.innerHTML = questions[q].question;
+        answer1.innerHTML = questions[q].incorrect_answers[1];
+        answer2.innerHTML = questions[q].incorrect_answers[0];
+        answer3.innerHTML = questions[q].correct_answer;
+        answer4.innerHTML = questions[q].incorrect_answers[2];
+        document.querySelector(".image").src = questions[q].image;
+        }
+      }
 })
 
 answer4.addEventListener("click", function(evt) {
-  evt.preventDefault();    
-  if (questionNumber === 10) {
-    question.innerHTML = `Congrats! You got ${correctAnswers} questions correct!`
-    answer1.innerHTML = ""
-    answer2.innerHTML = ""
-    answer3.innerHTML = ""
-    answer4.innerHTML = ""
-} else {
+  evt.preventDefault();  
   let i = questionNumber;  
   if (answer4.innerHTML === questions[i].correct_answer) {
-  alert(`Correct! ${questions[i].tidbit}`);
-  questionNumber = questionNumber + 1;
-  correctAnswers = correctAnswers +1;
-  console.log(correctAnswers);
-  } else{
-    alert(`Oof, I'm sorry but that's incorrect`);
+    alert(`Correct! ${questions[i].tidbit}`);
     questionNumber = questionNumber + 1;
-  }
-  let q = questionNumber;
-  question.innerHTML = questions[q].question;
-  answer1.innerHTML = questions[q].correct_answer;
-  answer2.innerHTML = questions[q].incorrect_answers[0];
-  answer3.innerHTML = questions[q].incorrect_answers[1];
-  answer4.innerHTML = questions[q].incorrect_answers[2];
-  document.querySelector(".image").src = questions[q].image;
-    }
+    correctAnswers = correctAnswers +1;
+    if (questionNumber === 10) {
+      question.innerHTML = `Congrats! You got ${correctAnswers} questions correct!`
+      answer1.innerHTML = "";
+      answer2.innerHTML = "";
+      answer3.innerHTML = "";
+      answer4.innerHTML = "";
+      answer1.style.display= "none";
+      answer2.style.display= "none";
+      answer3.style.display= "none";
+      answer4.style.display= "none";
+      } else {
+        let q = questionNumber;
+        question.innerHTML = questions[q].question;
+        answer1.innerHTML = questions[q].incorrect_answers[1];
+        answer2.innerHTML = questions[q].incorrect_answers[0];
+        answer3.innerHTML = questions[q].correct_answer;
+        answer4.innerHTML = questions[q].incorrect_answers[2];
+        document.querySelector(".image").src = questions[q].image;
+      }
+    } else {
+      alert(`Oof, I'm sorry but that's incorrect`);
+      questionNumber = questionNumber + 1;
+      if (questionNumber === 10) {
+        question.innerHTML = `Congrats! You got ${correctAnswers} questions correct!`
+        answer1.innerHTML = "";
+        answer2.innerHTML = "";
+        answer3.innerHTML = "";
+        answer4.innerHTML = "";
+        answer1.style.display= "none";
+        answer2.style.display= "none";
+        answer3.style.display= "none";
+        answer4.style.display= "none";
+      } else {
+        let q = questionNumber;
+        question.innerHTML = questions[q].question;
+        answer1.innerHTML = questions[q].incorrect_answers[1];
+        answer2.innerHTML = questions[q].incorrect_answers[0];
+        answer3.innerHTML = questions[q].correct_answer;
+        answer4.innerHTML = questions[q].incorrect_answers[2];
+        document.querySelector(".image").src = questions[q].image;
+        }
+      }
 })
 
 
