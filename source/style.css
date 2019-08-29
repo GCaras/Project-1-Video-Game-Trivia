@@ -17,7 +17,7 @@ body {
 }
 
 .greeting {
-    color: white;
+    color: rgb(50, 255, 47);
     font-size: 45px;
     margin: 0px auto;
     margin: 20px 0;
@@ -27,6 +27,7 @@ body {
 
 .image {
     max-height: 125px;
+    min-height: 125px;
     max-width: 200px;
     margin: 20px 0;
 }
@@ -44,7 +45,8 @@ button {
     -webkit-text-stroke: .25px black;
     text-align: center;
     height: 35px;
-    width: 120px;
+    margin: 10px 5px;
+    width: 90px;
 }
 
 .answers-list {
@@ -52,6 +54,7 @@ button {
     display: flex;
     flex-direction: row;
     height: 50px;
+    align-content: center;
     justify-items: center;
     width: 400px;
 }
@@ -63,17 +66,7 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 20px 0;
-    min-width: 200px;
+    min-width: 190px;
     height: 40px;
 }
 
-button {
-    background-color: black;
-    border: solid 2px white;
-    color: white;
-    -webkit-text-stroke: .25px black;
-    text-align: center;
-    height: 35px;
-    width: 120px;
-}
