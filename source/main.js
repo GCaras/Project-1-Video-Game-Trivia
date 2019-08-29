@@ -32,7 +32,7 @@ var q5 = new Question("In the Halo series, which era of SPARTAN is Master Chief?
 
 var q6 = new Question("Which game featured the very first easter egg ever?", [new Answer("Adventure", true), new Answer("Super Mario Bros.", false), new Answer("Aladdin", false), new Answer("Joust", false)], "The original 'Easter Egg' was created in 'Adventure' by programmer Warren Robinett in order to sneak due credit into a game without his Atari bosses's knowledge nor consent. By following an arcane series of steps, players could unlock a secret room that featured the giant flashing words: 'Created by Warren Robinett'.", "./images/yoshi-egg.png");
 
-var q7 = new Question("When was Steam first released?", [new Answer("2004", false), new Answer("2011", false), new Answer("2003", true), new Answer("2007", false)], "words", "./images/steam-arm.png");
+var q7 = new Question("When was Steam first released?", [new Answer("2004", false), new Answer("2011", false), new Answer("2003", true), new Answer("2007", false)], "the client's official release on September 12, 2003. The client and website choked under the strain of thousands of users simultaneously attempting to play the game. At the time, Steam's primary function was streamlining the patch process common in online computer games, and was an optional component for all other games.", "./images/team-fortress.png");
 
 var q8 = new Question("In the National Pokedex, what number is Pikachu", [new Answer("1", false), new Answer("151", false
 ), new Answer("56", false), new Answer("25", true)], "Pikachu (pokedex entry #25) keeps its tail raised to monitor its surroundings. If you yank its tail, it will try to bite you.", "./images/pikachu.png");
@@ -80,7 +80,7 @@ function fillButtonText() {
 
 function winCheck() {
   if (correctAnswers > 7) {
-  question.innerHTML = `Wow! You got ${correctAnswers}/10 questions correct!\n` + `Truely a hero worthy of weilding the Master Sword!`;
+  question.innerHTML = `Wow! You got ${correctAnswers}/10 questions correct!\n` + `Truzly a hero worthy of weilding the Master Sword!`;
   document.querySelector(".image").src = "./images/master-sword.png";
   } else if (correctAnswers > 4) {
     question.innerHTML = `Nice! You got ${correctAnswers}/10 questions correct!\n` + `You might want to try this test again before taking on the forces of Evil.`;
@@ -100,47 +100,61 @@ function winCheck() {
   answer2.style.display = "none";
   answer3.style.display = "none";
   answer4.style.display = "none";
-  questionNumber = 0;
-  correctAnswers = 0;
+  document.querySelector(".start-submit-button").style.display = "none";
+}
+
+function tidBitFillTextCorrect() {
+  question.innerHTML = `Correct! \n` + `${questions[questionNumber].tidBit}`;
+  correctAnswers = correctAnswers + 1;
+  answer1.style.display = "none";
+  answer2.style.display = "none";
+  answer3.style.display = "none";
+  answer4.style.display = "none";
   document.querySelector(".start-submit-button").style.display = "";
-  document.querySelector(".start-submit-button").innerHTML = "Again!";
+  document.querySelector(".start-submit-button").innerHTML = "Next!";
+}
+
+function tidBitFillTextWrong() {
+  question.innerHTML = `Oof, I'm sorry but that's incorrect.\n` + `${questions[questionNumber].tidBit}`;
+  answer1.style.display = "none";
+  answer2.style.display = "none";
+  answer3.style.display = "none";
+  answer4.style.display = "none";
+  document.querySelector(".start-submit-button").style.display = "";
+  document.querySelector(".start-submit-button").innerHTML = "Next!";
 }
 
 function answerCheck(text, answers) {
   for (i = 0; i <= 4; i++) {
-    if (text === answers[i].answerText) {
-      if (answers[i].isCorrect === true) {
-        alert(`Correct! \n` + `${questions[questionNumber].tidBit}`);
-        correctAnswers = correctAnswers + 1;
-        if (questionNumber + 1 === questions.length) {
-          winCheck(questionNumber);
-        } else {
-          questionNumber = questionNumber + 1;
-          fillButtonText(questionNumber);
-        }
+    if (text === answers[i].answerText) { 
+        if (answers[i].isCorrect === true) {
+      // if () {
+        tidBitFillTextCorrect(questionNumber);
+        questionNumber = questionNumber + 1;
       } else {
-        alert(`Oof, I'm sorry but that's incorrect.\n` + `${questions[questionNumber].tidBit}`);
-        if (questionNumber + 1 === questions.length) {
-          winCheck(questionNumber);
-        } else {
-          questionNumber = questionNumber + 1;
-          fillButtonText(questionNumber);
+        tidBitFillTextWrong(questionNumber);
+        questionNumber = questionNumber + 1;
         }
       }
     }
   }
-}
+
 
 submitButton.addEventListener("click", function (evt) {
   evt.preventDefault();
-  fillButtonText(questionNumber);
+  if (questionNumber === questions.length) {
+    winCheck(questionNumber);
+  } else {
+    fillButtonText(questionNumber);  document.querySelector(".image").src = questions[questionNumber].image;
+    document.querySelector(".start-submit-button").style.display = "none";
+  }
   document.querySelector(".image").src = questions[questionNumber].image;
   document.querySelector(".start-submit-button").style.display = "none";
   answer1.style.display = "";
   answer2.style.display = "";
   answer3.style.display = "";
   answer4.style.display = "";
-})
+  })
 
 answer1.addEventListener("click", function (evt) {
   evt.preventDefault();

@@ -11,7 +11,7 @@ body {
     -1px 1px 0 #000,
     1px 1px 0 #000;
     color: rgb(118, 230, 70);
-    background-color: rgb(43, 43, 43);
+    background-color: rgb(34, 34, 34);
     font-size: 36px;
     text-align: center;
 }
@@ -30,6 +30,10 @@ body {
     min-height: 125px;
     max-width: 200px;
     margin: 20px 0;
+}
+
+.question-hint-comment {
+    padding: 0 5px;
 }
 
 main {
@@ -53,6 +57,10 @@ button {
 
 button:focus {
     outline:0;
+}
+
+.start-submit-button {
+    margin: 0;
 }
 
 .answers-list {
