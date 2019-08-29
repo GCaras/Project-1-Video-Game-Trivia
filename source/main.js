@@ -89,7 +89,7 @@ function winCheck() {
     question.innerHTML = `Oh... You got ${correctAnswers}/10 questions correct.\n` + `I think there's an opening for a stableboy over at Lon Lon Ranch. Maybe try again?`;
     document.querySelector(".image").src = "./images/cow.jpg";
   } else {
-    question.innerHTML = `Damn... You got ${correctAnswers}/10 questions correct...`;
+    question.innerHTML = `Damn... You got ${correctAnswers}/10 questions correct...\n` + `ALL YOUR BASE ARE BELONG TO US`;
     document.querySelector(".image").src = "./images/all-your-base.png";
   }
   answer1.innerHTML = "";
