@@ -46,7 +46,11 @@ button {
     text-align: center;
     height: 35px;
     margin: 10px 5px;
-    width: 90px;
+    width: 60px;
+}
+
+button:focus {
+    outline:0;
 }
 
 .answers-list {
