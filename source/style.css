@@ -52,6 +52,7 @@ button {
     -webkit-text-stroke: .25px black;
     text-align: center;
     height: 35px;
+    font-size: 14px;
     margin: 10px 5px;
     width: 80px;
 }
