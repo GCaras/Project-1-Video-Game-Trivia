@@ -128,7 +128,6 @@ function answerCheck(text, answers) {
   for (i = 0; i <= 4; i++) {
     if (text === answers[i].answerText) { 
         if (answers[i].isCorrect === true) {
-      // if () {
         tidBitFillTextCorrect(questionNumber);
         questionNumber = questionNumber + 1;
       } else {
