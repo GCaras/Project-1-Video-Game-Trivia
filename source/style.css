@@ -42,7 +42,7 @@ main {
 
 button {
     background-color: black;
-    border: solid 2px white;
+    border: solid 1px white;
     color: white;
     -webkit-text-stroke: .25px black;
     text-align: center;
