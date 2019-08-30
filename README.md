@@ -16,5 +16,6 @@
   
 **Contribute:**
   >Source code: https://github.com/GCaras/Project-1-Video-Game-Trivia/
+  
   >Issue Tracker: https://github.com/GCaras/Project-1-Video-Game-Trivia/issues/
  
