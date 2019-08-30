@@ -72,6 +72,7 @@ button:focus {
 
 .answers-list {
     margin: auto;
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     height: 50px;
