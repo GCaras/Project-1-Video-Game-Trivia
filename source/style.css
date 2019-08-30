@@ -90,3 +90,62 @@ button:focus {
     min-width: 190px;
     height: 40px;
 }
+
+@media screen and (max-width: 320px) {
+    body {
+        max-width: 316px;
+        margin: 2px;
+    }
+
+    main {
+        min-width: 316px;
+    }
+
+    .greeting {
+        font-size: 30px;
+        max-width: 316px;
+    }
+    .question-hint-comment {
+        margin: 0;
+        max-width: 316px;
+    }
+    .answers-list {
+        max-width: 316px;
+    }
+
+    .answers {
+        min-width: 175px;
+  }
+}
+
+  @media screen and (max-width: 375px) {
+    body {
+        max-width: 368px;
+        min-width: 368px;
+    }
+
+    main {
+        max-width: 368px;
+        min-width: 368px;
+    }
+
+    .greeting {
+        font-size: 32px;
+        max-width: 368px;
+        min-width: 368px;
+    }
+
+    .question-hint-comment {
+        margin: 0;
+        max-width: 368px;
+        min-width: 368px;
+    }
+
+    .answers-list {
+        max-width: 368px;
+        min-width: 368px;
+    }
+    .answers {
+        min-width: 178px;
+    }
+}
