@@ -13,13 +13,14 @@ body {
     color: rgb(50, 255, 47);
     background-color: rgb(34, 34, 34);
     font-size: 36px;
-    padding: 4px;
     text-align: center;
+    text-decoration: none;
+    margin: 0px auto;
 }
 
 .greeting {
     color: rgb(50, 255, 47);
-    font-size: 45px;
+    font-size: 40px;
     margin: 0px auto;
     margin: 20px 0;
     margin-top: 15%;
@@ -35,7 +36,10 @@ body {
 
 .question-hint-comment {
     padding: 0 5px;
-    line-height: 35px;
+    line-height: 30px;
+    max-width: 90%;
+    margin: 0 auto;
+    margin-bottom: 10px;
 }
 
 main {

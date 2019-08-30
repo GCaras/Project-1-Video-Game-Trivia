@@ -129,10 +129,10 @@ function answerCheck(text, answers) {
     if (text === answers[i].answerText) { 
         if (answers[i].isCorrect === true) {
         tidBitFillTextCorrect(questionNumber);
-        questionNumber = questionNumber + 1;
+        return questionNumber = questionNumber + 1;
       } else {
         tidBitFillTextWrong(questionNumber);
-        questionNumber = questionNumber + 1;
+        return questionNumber = questionNumber + 1;
         }
       }
     }
