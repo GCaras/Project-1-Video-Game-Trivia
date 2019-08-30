@@ -51,10 +51,10 @@ main {
 }
 
 button {
-    background-color: rgb(92, 92, 92);
+    background-color: rgb(0, 0, 0);
     border: solid 2px rgb(228, 228, 228);
     color: rgb(50, 255, 47);
-    -webkit-text-stroke: .25px black;
+    -webkit-text-stroke: .25px rgb(74, 74, 74);
     text-align: center;
     height: 35px;
     font-size: 14px;
