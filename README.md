@@ -11,7 +11,7 @@
 **Technologies Used:**
   >JavaScript
 
-**Installastion instructions:**
+**Installation instructions:**
   >Go to https://gcaras.github.io/Project-1-Video-Game-Trivia/
   
 **Contribute:**
