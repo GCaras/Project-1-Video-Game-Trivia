@@ -138,7 +138,6 @@ function answerCheck(text, answers) {
     }
   }
 
-
 submitButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   if (questionNumber === questions.length) {
