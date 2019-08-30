@@ -80,7 +80,7 @@ function fillButtonText() {
 
 function winCheck() {
   if (correctAnswers > 7) {
-  question.innerHTML = `Wow! You got ${correctAnswers}/10 questions correct!\n` + `Truzly a hero worthy of weilding the Master Sword!`;
+  question.innerHTML = `Wow! You got ${correctAnswers}/10 questions correct!\n` + `Truly a hero worthy of weilding the Master Sword!`;
   document.querySelector(".image").src = "./images/master-sword.png";
   } else if (correctAnswers > 4) {
     question.innerHTML = `Nice! You got ${correctAnswers}/10 questions correct!\n` + `You might want to try this test again before taking on the forces of Evil.`;
@@ -132,7 +132,7 @@ function answerCheck(text, answers) {
         return questionNumber = questionNumber + 1;
       } else {
         tidBitFillTextWrong(questionNumber);
-        return questionNumber = questionNumber + 1;
+        return  questionNumber = questionNumber + 1;
         }
       }
     }
