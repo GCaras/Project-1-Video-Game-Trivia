@@ -42,6 +42,11 @@ body {
     margin-bottom: 40px;
 }
 
+.button-section {
+    display: flex;
+    justify-content: center;
+}
+
 main {
     padding: 0px;
     color: white;
@@ -68,6 +73,11 @@ button:focus {
 
 .start-submit-button {
     margin: 0;
+}
+
+.reset-submit-button {
+    margin: 0;
+    display: none;
 }
 
 .answers-list {

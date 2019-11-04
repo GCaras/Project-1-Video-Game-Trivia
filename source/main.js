@@ -84,10 +84,10 @@ function winCheck() {
   document.querySelector(".image").src = "./images/master-sword.png";
   } else if (correctAnswers > 4) {
     question.innerHTML = `Nice! You got ${correctAnswers}/10 questions correct!\n` + `You might want to try this test again before taking on the forces of Evil.`;
-    document.querySelector(".image").src = "./images/shrug.jpg";
+    document.querySelector(".image").src = "./images/shrug.png";
   } else if (correctAnswers > 1) {
     question.innerHTML = `Oh... You got ${correctAnswers}/10 questions correct.\n` + `I think there's an opening for a stableboy over at Lon Lon Ranch. Maybe try again?`;
-    document.querySelector(".image").src = "./images/cow.jpg";
+    document.querySelector(".image").src = "./images/cow.png";
   } else {
     question.innerHTML = `Damn... You got ${correctAnswers}/10 questions correct...\n` + `ALL YOUR BASE ARE BELONG TO US`;
     document.querySelector(".image").src = "./images/all-your-base.png";
@@ -101,6 +101,7 @@ function winCheck() {
   answer3.style.display = "none";
   answer4.style.display = "none";
   document.querySelector(".start-submit-button").style.display = "none";
+  document.querySelector(".reset-submit-button").style.display = "block";
 }
 
 function tidBitFillTextCorrect() {
@@ -152,7 +153,7 @@ submitButton.addEventListener("click", function (evt) {
   answer2.style.display = "";
   answer3.style.display = "";
   answer4.style.display = "";
-  })
+})
 
 answer1.addEventListener("click", function (evt) {
   evt.preventDefault();
